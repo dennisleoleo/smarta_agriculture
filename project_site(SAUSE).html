@@ -1,0 +1,176 @@
+<html>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+img.cov{
+	width : 100%;
+	height : 500px;
+	opacity : 0.7;
+	margin-top : 5px;
+	margin-right : 0px;
+}
+img.blk{
+	width : 900px;
+	height : 550px;
+	margin-top : 15px;
+}
+div.nav{
+	margin-top : 20px;
+	background-color : rgb(31,55,140);
+	width : 100%;
+	height : 38px;
+	padding : 10px;
+}
+button.btn{
+	background-color : black;
+	border : none;
+	float : left;
+	opacity : 1;
+	color : white;
+	padding : 10px;
+}
+button.sep{
+	background-color : black;
+	border : none;
+	float : right;
+	opacity : 1;
+	color : white;
+	padding : 10px;
+	margin-right : 20px;
+}
+div.image{
+	float : left;
+	}
+img.crew{
+	margin-top : 30px;
+	margin-left : 20px;
+	border-radius : 50%;
+	height : 100px;
+	width : 80px;
+}
+font.names{
+	margin-top : 500px;
+	color : teal;
+	font-size : 13px;
+	text-align : center;
+}
+div.check{
+  background-color: lightgrey;
+  border: 2% solid black;
+  padding: 4%;
+  margin: 4%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="nav">
+	<button class="btn" onclick="location.reload()"><i class="fa fa-home"></i>HOME</button>
+	<button class="btn" onclick="window.scrollBy(0,80)"><i class="fa fa-bars"></i>PREFACE</button>
+	<button class="btn">CONTENT</button>
+	<button class="btn" onclick="window.scrollBy(0,580)">CIRCUIT VIEW</button>
+	<button class="btn"  onclick="window.scrollBy(0,950)"><i class="fa fa-folder" ></i>DATABASE</button>
+	<button class="btn"><i class="fa fa-google"style="background: #dd4b39; padding:1px; height:13px; width:13px; color: white;"></i>COMPLAINTS</button>
+	<button class="sep" onclick="window.scrollBy(0,1200)">CREW</button>
+</div>
+<img src="C:\Users\DENY\Desktop\final year project\agri.png" class="cov">
+<br>
+
+ 
+<img src="C:\Users\DENY\Desktop\final year project\circuit_diag.jpg" class="blk">
+<br><br>
+<b>AS PER NORMS THE PLACING OF MOISTURE SENSORS OVER THE FIELD MUST FOLLOW THE UPCOMING PARAMETERS</b>
+<br><br>
+<b>DEPTH : </b> 4" (10cm approx.)<br><br>
+<b>DISTANCE : </b> Each 70 to 150 meters respective to field area.
+<br><br>
+<div class="check">
+	<b>You can check the moisture content required for your particular crop <br>
+	   for the particular season to control the irrigation required for your field<br><br></b>
+	<b>CROP TYPE :</b><br>
+	<input type="text" id="crop" placeholder="Enter crop type..."><br><br><br>
+	<b>MONTH :</b><br>
+	<input type="text" id="month" placeholder="Enter month of irrigation..."><br><br><br>
+	<button onclick="checkval()"> CHECK </button>
+ </div>	   
+<center style="margin-top:25px;">
+	<img src="C:\Users\DENY\Desktop\final year project\karpagam.jpg" class="crew"><br>
+	<font class="names">DR.N.KARPAGAM<br>948-645-4656<br>PROFESSOR  <br>VCET,MADURAI</font>
+</center>
+<ul>
+	<li>
+		<img src="C:\Users\DENY\Desktop\final year project\jegan.jpg" class="crew"><br>
+			<font class="names">JEGAN.B<br>978-933-2308<br>B.E/EEE<br>VCET,MADURAI</font>
+	</li>
+	<li>
+		<img src="C:\Users\DENY\Desktop\final year project\dennis.jpg" class="crew"><br>
+			<font class="names">DENNIS PRAVEEN.J<br>997-646-4205<br>B.E/EEE<br>VCET,MADURAI</font>
+	</li>
+	<li>
+		<img src="C:\Users\DENY\Desktop\final year project\murali.jpg" class="crew"><br>
+			<font class="names">BALA MURALI.R<br>638-154-7878<br>B.E/EEE<br>VCET,MADURAI</font>
+	</li>
+</ul>	
+
+
+<script>
+var month,crop;
+function checkval(){
+	crop=document.getElementById("crop").value;
+	month=document.getElementById("month").value;
+	if(crop=="rice"){
+		if(month=="january" || month=="february" || month=="march" || month=="april" || month=="may" || month=="june" || month=="july" || month=="august" || month=="september" || month=="october" || month=="november" || month=="december")
+		{	
+			window.alert("MAINTAIN A MOISTURE LEVEL OF 40 - 45");
+		}
+		else{
+			window.alert("ENTER VALID INPUT");
+			}
+		}
+		
+		if(crop=="wheat"){
+		if(month=="april" || month=="may" || month=="june" || month=="march")
+		{	
+			window.alert("MAINTAIN A MOISTURE LEVEL OF 32-35");
+		}
+		else if(month=="july" || month=="august" || month=="september" || month=="october")
+		{	
+			window.alert("MAINTAIN A MOISTURE LEVEL OF 27 OR 28");
+		}
+		else if(month=="december" || month=="november" || month=="january" || month=="february")
+		{	
+			window.alert("MAINTAIN A MOISTURE LEVEL OF 25-30");
+		}
+		else{
+			window.alert("ENTER VALID INPUT");
+			}
+		}
+		
+		if(crop=="sugarcane"){
+		if(month=="january" || month=="february" || month=="march" || month=="november" || month=="december")
+		{	
+			window.alert("MAINTAIN A MOISTURE LEVEL OF 30-40");
+		}
+		else{
+			window.alert("YOUR CROP IS NOT SUITABLE FOR THIS CLIMATE");
+			}
+		}
+		
+		if(crop=="corn"){
+		if(month=="april" || month=="may" || month=="june" || month=="july" || month=="august" || month=="september" || month=="october" || month=="november")
+		{	
+			window.alert("MAINTAIN A MOISTURE LEVEL OF 45-50");
+		}
+		if(month=="march" || month=="february")
+		{	
+			window.alert("CORRECT TIME TO SOW... MAINTAIN A WELL DRAINED MOISTURE LEVEL OF 60 - 70");
+		}
+		else{
+			window.alert("YOUR CROP IS NOT YET READY FOR THE PRESENT CLIMATE");
+			}
+		}
+	}
+</script>
+</body>
+</html>
